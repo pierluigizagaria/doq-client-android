@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">doQ</string>
+    <string name="session_notification">Session notification</string>
+    <string name="session_event_notification">Session event notifications</string>
+    <string name="grant_permission">Grant permission</string>
+    <string name="log_in_spotify">Log in with Spotify</string>
+    <string name="session_service">Session service</string>
+    <string name="spotify_notification_listener">Spotify notification listener</string>
+    <string name="session_connection_error">Unable to create session</string>
+    <string name="session_notification_title">Users</string>
+    <string name="session_notification_substring">Session</string>
+    <string name="session_notification_invite">Invite</string>
+    <string name="session_notification_close">Share</string>
+    <string name="start_session_notification_title">Listen to music with your friends</string>
+    <string name="start_session_notification_text">Tap to start a group session</string>
+    <string name="session_socket_error">An error occurred</string>
+    <string name="spotify_remote_service">Spotify controller service</string>
+    <string name="email" translatable="false">Email</string>
+    <string name="password" translatable="false">Password</string>
+</resources>

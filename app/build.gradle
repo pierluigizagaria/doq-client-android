@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.application.doq"
+        minSdkVersion 26
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "SOCKET_BASE_URL", SOCKET_BASE_URL
+            buildConfigField "String", "API_BASE_URL", API_BASE_URL
+            buildConfigField "String", "SPOTIFY_CLIENT_ID", SPOTIFY_CLIENT_ID
+            buildConfigField "String", "SPOTIFY_REDIRECT_URI", SPOTIFY_REDIRECT_URI
+        }
+        debug {
+            applicationIdSuffix ".debug"
+            buildConfigField "String", "SOCKET_BASE_URL", DEBUG_SOCKET_BASE_URL
+            buildConfigField "String", "API_BASE_URL", DEBUG_API_BASE_URL
+            buildConfigField "String", "SPOTIFY_CLIENT_ID", DEBUG_SPOTIFY_CLIENT_ID
+            buildConfigField "String", "SPOTIFY_REDIRECT_URI", DEBUG_SPOTIFY_REDIRECT_URI
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':spotify-app-remote')
+    implementation "com.google.code.gson:gson:2.8.5"
+    implementation "io.socket:socket.io-client:1.0.0"
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.2'
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+}

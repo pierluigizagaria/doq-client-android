@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">doQ</string>
+    <string name="session_notification">Notifica sessione</string>
+    <string name="session_event_notification">Notifiche eventi sessione</string>
+    <string name="grant_permission">Grant permission</string>
+    <string name="log_in_spotify">Accedi con Spotify</string>
+    <string name="session_service">Servizio di sessione</string>
+    <string name="spotify_notification_listener">Ascoltatore notifiche Spotify</string>
+    <string name="session_connection_error">Impossibile creare la sessione</string>
+    <string name="session_notification_title">Utenti</string>
+    <string name="session_notification_substring">Sessione</string>
+    <string name="session_notification_invite">Invita</string>
+    <string name="session_notification_close">Chiudi</string>
+    <string name="start_session_notification_title">Ascolta musica con i tuoi amici</string>
+    <string name="start_session_notification_text">Premi per creare una sessione di gruppo</string>
+    <string name="session_socket_error">Si è verificato un errore</string>
+    <string name="spotify_remote_service">Controller di Spotify</string>
+</resources>
